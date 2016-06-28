@@ -9,6 +9,8 @@ function max(num1, num2){
       return num2;
     }
 }
+console.assert(max(1,2)===2);//t
+console.assert(max(1,2)===1);//f
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
@@ -23,6 +25,10 @@ function maxOfThree(num1, num2, num3){
       return num3;
     }
 }
+console.assert(maxOfThree(1,2,3)===3);//t
+console.assert(maxOfThree(1,2,3)===1);//f
+
+
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -35,6 +41,13 @@ function isVowel(char){
       return false;
     }
 }
+console.assert(isVowel(1)===false);//t
+console.assert(isVowel(1)===true);//f
+console.assert(isVowel('c')===true);//f
+console.assert(isVowel('c')===false);//t
+console.assert(isVowel('u')===true);//t
+console.assert(isVowel('u')===false);//f
+
 
 // ---------------------
 // Write a function translate() that will translate a text into "Rovarspraket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -51,6 +64,9 @@ function rovarspraket(phrase){
     var newPhrase = phraseSplit.join('');
     return newPhrase;
 }
+console.assert(rovarspraket('Jimbo')==='JoJimombobo');//t
+console.assert(rovarspraket('Jimbo')==='Jimbo');//f
+
 
 
 // ---------------------
@@ -67,3 +83,5 @@ function reverse(phrase){
   return newPhrase;
     //...
 }
+console.assert(reverse('a man a plan a canal panama')==='amanap lanac a nalp a nam a');//t
+console.assert(reverse('a man a plan a canal panama')==='bob');//f

@@ -27,6 +27,8 @@
 function sum(num1, num2){
   return num1+num2;
 }
+console.assert(sum(1,2)===3);//t
+console.assert(sum(1,2)===2);//f
 
 
 // Q2
@@ -36,6 +38,8 @@ function sum(num1, num2){
 function avg(num1, num2, num3) {
   return (num1+num2+num3)/3;
 }
+console.assert(avg(1,2,3)===2);//t
+console.assert(avg(1,2,3)===1);//f
 
 
 // Q3
@@ -45,6 +49,8 @@ function avg(num1, num2, num3) {
 function getLength(string) {
   return string.length;
 }
+console.assert(getLength('hello')===5);//t
+console.assert(getLength('hello')===7);//f
 
 
 // Q4
@@ -60,6 +66,9 @@ function greaterThan(num1, num2) {
     return false;
   }
 }
+console.assert(greaterThan(1,2));//f
+console.assert(greaterThan(2,1));//t
+console.assert(greaterThan(4,2));//t
 
 
 // Q5
@@ -71,7 +80,8 @@ function greaterThan(num1, num2) {
 function greet(name) {
   return 'Hello, '+name+'!';
 }
-
+console.assert(greet('Christian') === 'Hello, Christian!');//t
+console.assert(greet('Christian') === 'Hello, Jimbo!');//f
 
 // Q6
 // Write a function called `madlib` that takes
@@ -84,9 +94,12 @@ function greet(name) {
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 function madlib(word1, word2, word3, word4) {
-  sentence = 'I have a degree in '+word1+'but my real specialty is '+word2+' with some minor experience in '+word3+'. Do not even ask me to fix your '+word4+'.';
+  sentence = 'I have a degree in '+word1+', but my real specialty is '+word2+' with some minor experience in '+word3+'. Do not even ask me to fix your '+word4+'.';
   return sentence;
 }
+console.assert(madlib('flerm', 'blah', 'blerg', 'flig') === 'I have a degree in flerm, but my real specialty is blah with some minor experience in blerg. Do not even ask me to fix your flig.');//t
+console.assert(madlib('flerm', 'blah', 'blerg', 'flig') === 'miscellania');//f
+
 
 
 
